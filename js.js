@@ -221,353 +221,348 @@ function clicouNoBloco(numeroDoBloco){
                 div.appendChild(image);
             }else{
 
-                bloco7WhatValueWasPassed = 'O'
+            bloco7Isclicked = true;
 
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
-            }
-        }
-
-        bloco7Isclicked = true;
-
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        }
-    }
-
-    if(numeroDoBloco == 8){
-        var div = document.getElementById("bloco8");
-        if(bloco8Isclicked == false){
             if(xOrCicle == false){
-
-                bloco8WhatValueWasPassed = 'X'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
+                xOrCicle = true;
             }else{
-
-                bloco8WhatValueWasPassed = 'O'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+                xOrCicle = false;
             }
         }
 
-        bloco8Isclicked = true;
+        if(numeroDoBloco == 8){
+            var div = document.getElementById("bloco8");
+            if(bloco8Isclicked == false){
+                if(xOrCicle == false){
 
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        };
-    }
+                    bloco8WhatValueWasPassed = 'X'
 
-    if(numeroDoBloco == 9){
-        var div = document.getElementById("bloco9");
-        if(bloco9Isclicked == false){
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+
+                    bloco8WhatValueWasPassed = 'O'
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco8Isclicked = true;
+
             if(xOrCicle == false){
-
-                bloco9WhatValueWasPassed = 'X'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
+                xOrCicle = true;
             }else{
+                xOrCicle = false;
+            };
+        }
 
-                bloco9WhatValueWasPassed = 'O'
+        if(numeroDoBloco == 9){
+            var div = document.getElementById("bloco9");
+            if(bloco9Isclicked == false){
+                if(xOrCicle == false){
 
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+                    bloco9WhatValueWasPassed = 'X'
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+
+                    bloco9WhatValueWasPassed = 'O'
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco9Isclicked = true;
+
+            if(xOrCicle == false){
+                xOrCicle = true;
+            }else{
+                xOrCicle = false;
             }
         }
 
-        bloco9Isclicked = true;
+        //GANHAR POR LINHA NAS HORIZONATAL
 
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
+        var todosOsValoresForamPassados = bloco1WhatValueWasPassed != null && bloco2WhatValueWasPassed != null && bloco3WhatValueWasPassed != null && bloco4WhatValueWasPassed != null && bloco5WhatValueWasPassed != null && bloco6WhatValueWasPassed != null && bloco7WhatValueWasPassed != null && bloco8WhatValueWasPassed != null && bloco9WhatValueWasPassed != null;
+
+        console.log(todosOsValoresForamPassados);
+
+        if(bloco1WhatValueWasPassed == 'X' && bloco2WhatValueWasPassed == 'X' && bloco3WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
+
+            var div = document.getElementById("bloco1");
+            div.style="background-color: greenyellow;"
+
+            var div = document.getElementById("bloco2");
+            div.style="background-color: greenyellow;"
+
+            var div = document.getElementById("bloco3");
+            div.style="background-color: greenyellow;"
+
+        }else if(bloco1WhatValueWasPassed == 'O' && bloco2WhatValueWasPassed == 'O' && bloco3WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
+
+            var div = document.getElementById("bloco1");
+            div.style="background-color: greenyellow;"
+
+            var div = document.getElementById("bloco2");
+            div.style="background-color: greenyellow;"
+
+            var div = document.getElementById("bloco3");
+            div.style="background-color: greenyellow;"
+
+
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
         }
-    }
 
-    //GANHAR POR LINHA NAS HORIZONATAL
+        if(bloco4WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco6WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
 
-    var todosOsValoresForamPassados = bloco1WhatValueWasPassed != null && bloco2WhatValueWasPassed != null && bloco3WhatValueWasPassed != null && bloco4WhatValueWasPassed != null && bloco5WhatValueWasPassed != null && bloco6WhatValueWasPassed != null && bloco7WhatValueWasPassed != null && bloco8WhatValueWasPassed != null && bloco9WhatValueWasPassed != null;
+            var div = document.getElementById("bloco4");
+            div.style="background-color: greenyellow;"
 
-    console.log(todosOsValoresForamPassados);
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-    if(bloco1WhatValueWasPassed == 'X' && bloco2WhatValueWasPassed == 'X' && bloco3WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+            var div = document.getElementById("bloco6");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco1");
-        div.style="background-color: greenyellow;"
+        }else if(bloco4WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco6WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
 
-        var div = document.getElementById("bloco2");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco4");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco3");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-    }else if(bloco1WhatValueWasPassed == 'O' && bloco2WhatValueWasPassed == 'O' && bloco3WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
+            var div = document.getElementById("bloco6");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco1");
-        div.style="background-color: greenyellow;"
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
+        }
 
-        var div = document.getElementById("bloco2");
-        div.style="background-color: greenyellow;"
+        if(bloco7WhatValueWasPassed == 'X' && bloco8WhatValueWasPassed == 'X' && bloco9WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
 
-        var div = document.getElementById("bloco3");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco7");
+            div.style="background-color: greenyellow;"
 
+            var div = document.getElementById("bloco8");
+            div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
+            var div = document.getElementById("bloco9");
+            div.style="background-color: greenyellow;"
 
-    if(bloco4WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco6WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+        }else if(bloco7WhatValueWasPassed == 'O' && bloco8WhatValueWasPassed == 'O' && bloco9WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
 
-        var div = document.getElementById("bloco4");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco7");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco8");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco6");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco9");
+            div.style="background-color: greenyellow;"
 
-    }else if(bloco4WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco6WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
+        }
 
-        var div = document.getElementById("bloco4");
-        div.style="background-color: greenyellow;"
+        //GANHAR POR LINHA NA VERTICAL
+        if(bloco1WhatValueWasPassed == 'X' && bloco4WhatValueWasPassed == 'X' && bloco7WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
 
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco1");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco6");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco4");
+            div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
+            var div = document.getElementById("bloco7");
+            div.style="background-color: greenyellow;"
 
-    if(bloco7WhatValueWasPassed == 'X' && bloco8WhatValueWasPassed == 'X' && bloco9WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+        }else if(bloco1WhatValueWasPassed == 'O' && bloco4WhatValueWasPassed == 'O' && bloco7WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
 
-        var div = document.getElementById("bloco7");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco1");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco8");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco4");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco9");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco7");
+            div.style="background-color: greenyellow;"
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
+        }
 
-    }else if(bloco7WhatValueWasPassed == 'O' && bloco8WhatValueWasPassed == 'O' && bloco9WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
+        if(bloco2WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco8WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
 
-        var div = document.getElementById("bloco7");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco2");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco8");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco9");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco8");
+            div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
+        }else if(bloco2WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco8WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
 
-    //GANHAR POR LINHA NA VERTICAL
-    if(bloco1WhatValueWasPassed == 'X' && bloco4WhatValueWasPassed == 'X' && bloco7WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+            var div = document.getElementById("bloco2");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco1");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco4");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco8");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco7");
-        div.style="background-color: greenyellow;"
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
+        }
+        
+        if(bloco3WhatValueWasPassed == 'X' && bloco6WhatValueWasPassed == 'X' && bloco9WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
 
-    }else if(bloco1WhatValueWasPassed == 'O' && bloco4WhatValueWasPassed == 'O' && bloco7WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
+            var div = document.getElementById("bloco3");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco1");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco6");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco4");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco9");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco7");
-        div.style="background-color: greenyellow;"
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
+        }else if(bloco3WhatValueWasPassed == 'O' && bloco6WhatValueWasPassed == 'O' && bloco9WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
 
-    if(bloco2WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco8WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+            var div = document.getElementById("bloco3");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco2");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco6");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco9");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco8");
-        div.style="background-color: greenyellow;"
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
+        }
 
-    }else if(bloco2WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco8WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
+        //GANHAR NA DIAGONAL
+        if(bloco1WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco9WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
 
-        var div = document.getElementById("bloco2");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco1");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco8");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco9");
+            div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
-    
-    if(bloco3WhatValueWasPassed == 'X' && bloco6WhatValueWasPassed == 'X' && bloco9WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+        }else if(bloco1WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco9WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
 
-        var div = document.getElementById("bloco3");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco1");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco6");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco9");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco9");
+            div.style="background-color: greenyellow;"
 
-    }else if(bloco3WhatValueWasPassed == 'O' && bloco6WhatValueWasPassed == 'O' && bloco9WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
+        }
 
-        var div = document.getElementById("bloco3");
-        div.style="background-color: greenyellow;"
+        if(bloco3WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco7WhatValueWasPassed == 'X'){
+            messageWin = 'X ganhou';
 
-        var div = document.getElementById("bloco6");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco3");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco9");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
+            var div = document.getElementById("bloco7");
+            div.style="background-color: greenyellow;"
 
-    //GANHAR NA DIAGONAL
-    if(bloco1WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco9WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+        }else if(bloco3WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco7WhatValueWasPassed == 'O'){
+            messageWin = 'O ganhou';
 
-        var div = document.getElementById("bloco1");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco3");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco5");
+            div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco9");
-        div.style="background-color: greenyellow;"
+            var div = document.getElementById("bloco7");
+            div.style="background-color: greenyellow;"
 
-    }else if(bloco1WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco9WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
+        }else if(todosOsValoresForamPassados == true && messageWin == null){
+            console.log('entrou no if velha');
+            messageWin = "VELHA"
+        }
 
-        var div = document.getElementById("bloco1");
-        div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
 
-        var div = document.getElementById("bloco9");
-        div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
+        if(messageWin){
+            console.log('entrou no primeiro if');
+            console.log('messagewin: '+messageWin);
+            if(messageWin == 'X ganhou'){
+                console.log('entrou no if do X');
+                var modal1 = document.getElementById("messageDeVitoriaX");
+                modal1.showModal();
+                endGame = true;
 
-    if(bloco3WhatValueWasPassed == 'X' && bloco5WhatValueWasPassed == 'X' && bloco7WhatValueWasPassed == 'X'){
-        messageWin = 'X ganhou';
+                /*var div = document.getElementById("messageDeVitoria")
+                const image = document.createElement("img");
+                image.src = 'imagens/x_win.png';
+                div.appendChild(image)*/;
+            }else if(messageWin == 'O ganhou'){
+                console.log('entrou no if do O');
+                var modal1 = document.getElementById("messageDeVitoriaO");
+                modal1.showModal();
+                endGame = true;
 
-        var div = document.getElementById("bloco3");
-        div.style="background-color: greenyellow;"
-
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
-
-        var div = document.getElementById("bloco7");
-        div.style="background-color: greenyellow;"
-
-    }else if(bloco3WhatValueWasPassed == 'O' && bloco5WhatValueWasPassed == 'O' && bloco7WhatValueWasPassed == 'O'){
-        messageWin = 'O ganhou';
-
-        var div = document.getElementById("bloco3");
-        div.style="background-color: greenyellow;"
-
-        var div = document.getElementById("bloco5");
-        div.style="background-color: greenyellow;"
-
-        var div = document.getElementById("bloco7");
-        div.style="background-color: greenyellow;"
-
-    }else if(todosOsValoresForamPassados == true && messageWin == null){
-        console.log('entrou no if velha');
-        messageWin = "VELHA"
-    }
-
-
-
-
-    if(messageWin){
-        console.log('entrou no primeiro if');
-        console.log('messagewin: '+messageWin);
-        if(messageWin == 'X ganhou'){
-            console.log('entrou no if do X');
-            var modal1 = document.getElementById("messageDeVitoriaX");
-            modal1.showModal();
-
-            /*var div = document.getElementById("messageDeVitoria")
-            const image = document.createElement("img");
-            image.src = 'imagens/x_win.png';
-            div.appendChild(image)*/;
-        }else if(messageWin == 'O ganhou'){
-            console.log('entrou no if do O');
-            var modal1 = document.getElementById("messageDeVitoriaO");
-            modal1.showModal();
-
-            /*var div = document.getElementById("messageDeVitoria")
-            const image = document.createElement("img");
-            image.src = 'imagens/o_win.png';
-            div.appendChild(image);*/
-        }else{
-            var modal1 = document.getElementById("messageDeVitoriaVelha");
-            modal1.showModal();
+                /*var div = document.getElementById("messageDeVitoria")
+                const image = document.createElement("img");
+                image.src = 'imagens/o_win.png';
+                div.appendChild(image);*/
+            }else{
+                var modal1 = document.getElementById("messageDeVitoriaVelha");
+                modal1.showModal();
+                endGame = true;
+            }
         }
     }
 
