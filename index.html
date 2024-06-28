@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js"></script>
+</head>
+<body>
+   
+    <div id="jogoDaVelha">
+        <button id="resetGame" onclick="resetJogo()">Resetar Jogo</button>
+        <div id="row1">
+            <div id="bloco1" onclick="clicouNoBloco(1)"></div>
+            <div id="bloco2" onclick="clicouNoBloco(2)"></div>
+            <div id="bloco3" onclick="clicouNoBloco(3)"></div>
+        </div>
+        <div id="row2">
+            <div id="bloco4" onclick="clicouNoBloco(4)"></div>
+            <div id="bloco5" onclick="clicouNoBloco(5)"></div>
+            <div id="bloco6" onclick="clicouNoBloco(6)"></div>
+        </div>
+        <div id="row3">
+            <div id="bloco7" onclick="clicouNoBloco(7)"></div>
+            <div id="bloco8" onclick="clicouNoBloco(8)"></div>
+            <div id="bloco9" onclick="clicouNoBloco(9)"></div>
+        </div>
+        
+        
+    </div>
+    <dialog id="messageDeVitoriaX">
+        <img src="imagens/x_win.png" alt="">
+        <button id="closeModal" onclick="fecharModal('X')">Close</button>
+    </dialog>
+
+    <dialog id="messageDeVitoriaO">
+        <img src="imagens/o_win.png" alt="">
+        <button id="closeModal" onclick="fecharModal('O')">Close</button>
+    </dialog>
+
+    <dialog id="messageDeVitoriaVelha">
+        <img src="imagens/deu-velha.png" alt="">
+        <button id="closeModal" onclick="fecharModal('VELHA')">Close</button>
+    </dialog>
+
+</body>
+</html>
