@@ -359,7 +359,7 @@ function clicouNoBloco(numeroDoBloco){
         var div = document.getElementById("bloco6");
         div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados){
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
@@ -388,7 +388,7 @@ function clicouNoBloco(numeroDoBloco){
         var div = document.getElementById("bloco9");
         div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados){
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
@@ -417,7 +417,7 @@ function clicouNoBloco(numeroDoBloco){
 
         var div = document.getElementById("bloco7");
         div.style="background-color: greenyellow;"
-    }else if(todosOsValoresForamPassados){
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
@@ -446,7 +446,7 @@ function clicouNoBloco(numeroDoBloco){
         var div = document.getElementById("bloco8");
         div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados){
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
@@ -475,7 +475,7 @@ function clicouNoBloco(numeroDoBloco){
         var div = document.getElementById("bloco9");
         div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados){
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
@@ -505,7 +505,7 @@ function clicouNoBloco(numeroDoBloco){
         var div = document.getElementById("bloco9");
         div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados){
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
@@ -534,7 +534,7 @@ function clicouNoBloco(numeroDoBloco){
         var div = document.getElementById("bloco7");
         div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados){
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
