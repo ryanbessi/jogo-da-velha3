@@ -1,5 +1,6 @@
 
 var xOrCicle = false;//if it's Circle is true; if it's X is false 
+var endGame = false;
 var bloco1Isclicked = false;
 var bloco2Isclicked = false;
 var bloco3Isclicked = false;
@@ -23,203 +24,213 @@ var bloco9WhatValueWasPassed;
 var messageWin;
 
 function clicouNoBloco(numeroDoBloco){
-    if(numeroDoBloco == 1){
-        var div = document.getElementById("bloco1");
-        if(bloco1Isclicked == false){
+    if(!endGame){
+        if(numeroDoBloco == 1){
+            var div = document.getElementById("bloco1");
+            if(bloco1Isclicked == false){
+                if(xOrCicle == false){
+
+                    bloco1WhatValueWasPassed = 'X'
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+                    console.log('entrou no else');
+                    bloco1WhatValueWasPassed = 'O'
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco1Isclicked = true;
+
             if(xOrCicle == false){
-
-                bloco1WhatValueWasPassed = 'X'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
+                xOrCicle = true;
             }else{
-                console.log('entrou no else');
-                bloco1WhatValueWasPassed = 'O'
+                xOrCicle = false;
+            }
+            
+        }
 
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+        if(numeroDoBloco == 2){
+            var div = document.getElementById("bloco2");
+            if(bloco2Isclicked == false){
+                if(xOrCicle == false){
+                    bloco2WhatValueWasPassed = 'X'
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+
+                    bloco2WhatValueWasPassed = 'O'
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco2Isclicked = true;
+
+            if(xOrCicle == false){
+                xOrCicle = true;
+            }else{
+                xOrCicle = false;
             }
         }
 
-        bloco1Isclicked = true;
+        if(numeroDoBloco == 3){
+            var div = document.getElementById("bloco3");
+            if(bloco3Isclicked == false){
+                if(xOrCicle == false){
 
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        }
-        
-    }
+                    bloco3WhatValueWasPassed = 'X'
 
-    if(numeroDoBloco == 2){
-        var div = document.getElementById("bloco2");
-        if(bloco2Isclicked == false){
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+
+                    bloco3WhatValueWasPassed = 'O';
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco3Isclicked = true;
+
             if(xOrCicle == false){
-                bloco2WhatValueWasPassed = 'X'
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
+                xOrCicle = true;
             }else{
-
-                bloco2WhatValueWasPassed = 'O'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+                xOrCicle = false;
             }
         }
 
-        bloco2Isclicked = true;
+        if(numeroDoBloco == 4){
+            var div = document.getElementById("bloco4");
+            if(bloco4Isclicked == false){
+                if(xOrCicle == false){
 
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        }
-    }
+                    bloco4WhatValueWasPassed = 'X'
 
-    if(numeroDoBloco == 3){
-        var div = document.getElementById("bloco3");
-        if(bloco3Isclicked == false){
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+
+                    bloco4WhatValueWasPassed = 'O';
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco4Isclicked = true;
+
             if(xOrCicle == false){
-
-                bloco3WhatValueWasPassed = 'X'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
+                xOrCicle = true;
             }else{
-
-                bloco3WhatValueWasPassed = 'O';
-
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+                xOrCicle = false;
             }
         }
 
-        bloco3Isclicked = true;
+        if(numeroDoBloco == 5){
+            var div = document.getElementById("bloco5");
+            if(bloco5Isclicked == false){
+                if(xOrCicle == false){
 
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        }
-    }
+                    bloco5WhatValueWasPassed = 'X'
 
-    if(numeroDoBloco == 4){
-        var div = document.getElementById("bloco4");
-        if(bloco4Isclicked == false){
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+
+                    bloco5WhatValueWasPassed = 'O';
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco5Isclicked = true;
+
             if(xOrCicle == false){
-
-                bloco4WhatValueWasPassed = 'X'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
+                xOrCicle = true;
             }else{
-
-                bloco4WhatValueWasPassed = 'O';
-
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+                xOrCicle = false;
             }
         }
 
-        bloco4Isclicked = true;
+        if(numeroDoBloco == 6){
+            var div = document.getElementById("bloco6");
+            if(bloco6Isclicked == false){
+                if(xOrCicle == false){
 
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        }
-    }
+                    bloco6WhatValueWasPassed = 'X'
 
-    if(numeroDoBloco == 5){
-        var div = document.getElementById("bloco5");
-        if(bloco5Isclicked == false){
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
+
+                    bloco6WhatValueWasPassed = 'O'
+
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
+            }
+
+            bloco6Isclicked = true;
+
             if(xOrCicle == false){
-
-                bloco5WhatValueWasPassed = 'X'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
+                xOrCicle = true;
             }else{
-
-                bloco5WhatValueWasPassed = 'O';
-
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+                xOrCicle = false;
             }
         }
 
-        bloco5Isclicked = true;
+        if(numeroDoBloco == 7){
+            var div = document.getElementById("bloco7");
+            if(bloco7Isclicked == false){
+                if(xOrCicle == false){
 
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        }
-    }
+                    bloco7WhatValueWasPassed = 'X';
 
-    if(numeroDoBloco == 6){
-        var div = document.getElementById("bloco6");
-        if(bloco6Isclicked == false){
-            if(xOrCicle == false){
+                    const image = document.createElement("img");
+                    image.src = 'imagens/X_png.png';
+                    
+                    div.appendChild(image);
+                }else{
 
-                bloco6WhatValueWasPassed = 'X'
+                    bloco7WhatValueWasPassed = 'O'
 
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
-            }else{
-
-                bloco6WhatValueWasPassed = 'O'
-
-                const image = document.createElement("img");
-                image.src = 'imagens/Círculo-PNg.png';
-                
-                div.appendChild(image);
+                    const image = document.createElement("img");
+                    image.src = 'imagens/Círculo-PNg.png';
+                    
+                    div.appendChild(image);
+                }
             }
-        }
-
-        bloco6Isclicked = true;
-
-        if(xOrCicle == false){
-            xOrCicle = true;
-        }else{
-            xOrCicle = false;
-        }
-    }
-
-    if(numeroDoBloco == 7){
-        var div = document.getElementById("bloco7");
-        if(bloco7Isclicked == false){
-            if(xOrCicle == false){
-
-                bloco7WhatValueWasPassed = 'X';
-
-                const image = document.createElement("img");
-                image.src = 'imagens/X_png.png';
-                
-                div.appendChild(image);
-            }else{
 
             bloco7Isclicked = true;
 
@@ -600,6 +611,8 @@ function resetJogo(){
         messageWin = null;
         bloco1Isclicked = false;
         xOrCicle = false;
+
+        endGame = false;
 
         var div = document.getElementById("bloco2");
         div.style="background-color: white;"
