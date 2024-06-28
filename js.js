@@ -304,6 +304,7 @@ function clicouNoBloco(numeroDoBloco){
     //GANHAR POR LINHA NAS HORIZONATAL
 
     var todosOsValoresForamPassados = bloco1WhatValueWasPassed != null && bloco2WhatValueWasPassed != null && bloco3WhatValueWasPassed != null && bloco4WhatValueWasPassed != null && bloco5WhatValueWasPassed != null && bloco6WhatValueWasPassed != null && bloco7WhatValueWasPassed != null && bloco8WhatValueWasPassed != null && bloco9WhatValueWasPassed != null;
+
     console.log(todosOsValoresForamPassados);
 
     if(bloco1WhatValueWasPassed == 'X' && bloco2WhatValueWasPassed == 'X' && bloco3WhatValueWasPassed == 'X'){
@@ -330,7 +331,8 @@ function clicouNoBloco(numeroDoBloco){
         var div = document.getElementById("bloco3");
         div.style="background-color: greenyellow;"
 
-    }else if(todosOsValoresForamPassados){
+
+    }else if(todosOsValoresForamPassados == true && messageWin == null){
         console.log('entrou no if velha');
         messageWin = "VELHA"
     }
